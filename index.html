@@ -3,24 +3,14 @@ layout: default
 title: Home
 #title: Patrick Jimison
 ---
-<!doctype html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-	<div class="blurb">
-		<p>I'm a CSUS Computer Science graduate working as a Linux Systems Programmer at Intel <a href="/about">Read more about my life...</a></p>
-	</div><!-- /.blurb -->
-		<h1>{{ "Hello World!" | downcase }}</h1>
-		{% assign post = site.posts.first %}
-			<div class="c-hero" style="background: url({{post.thumbnail_image.large | relative_url}})bottom center / cover no-repeat;">
-	   			<h1 class="c-hero__title">{{ post.title }}</h1>
-	   			{{ post.intro | markdownify  }}
-	   			<a href="{{ post.url }}" class="btn--hero">Read the full Post</a>
-			</div>
-  </body>
-</html>
-
+<div class="blurb">
+<h1>{{ "Patrick Jimison" | downcase }}</h1>
+<p>I'm a Computer Science graduate from Sacramento working as a Component Design Engineer for Intel</p>
+<p> <a href="/about">Read more about my life...</a></p>
+</div><!-- /.blurb -->
+{% assign post = site.posts.first %}
+<div class="c-hero" style="background: url({{post.thumbnail_image.large | relative_url}})bottom center / cover no-repeat;">
+<h1 class="c-hero__title">{{ post.title }}</h1>
+{{ post.intro | markdownify  }}
+<a href="{{ post.url }}" class="btn--hero">Read the full Post</a>
+</div>
