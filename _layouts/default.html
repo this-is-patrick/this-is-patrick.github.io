@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-        <head>
-    			<meta charset="utf-8">
-                <title>{{ page.title }}</title>
-                <!-- link to main stylesheet -->
-                <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-        </head>
-        <body>
-                <nav>
-                <ul>
-						{% include navigation.html %}
-                </ul>
-                </nav>
-                <div class="container">
-
-                {{ content }}
-
-                </div><!-- /.container -->
-                <footer>
-                <ul>
-                        <li><a href="https://github.com/this-is-patrick">github.com/this-is-patrick</a></li>
-                        </ul>
-                </footer>
-        </body>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <!-- link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        {% feed_meta %}
+        {% seo %}
+    </head>
+    <body>
+        <nav>
+            <ul>
+                {% include navigation.html %}
+            </ul>
+        </nav>
+        <div class="container">
+            {{ content }}
+        </div><!-- /.container -->
+        <footer>
+            <ul>
+                <li><a href="https://github.com/this-is-patrick">github.com/this-is-patrick</a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
