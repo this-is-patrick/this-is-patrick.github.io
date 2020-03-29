@@ -1,3 +1,13 @@
 me: Patrick Jimison, Software Engineer
 email: pat.jimison@gmail.com
 markdown: kramdown
+defaults:
+    - scope: 
+        path: ""
+        type: "posts"
+      values:
+        layout: "post"
+    - scope: 
+        path: ""
+      values:
+        layout: "default"
