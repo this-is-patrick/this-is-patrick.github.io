@@ -18,8 +18,8 @@ jobs:
       - name: Echo greeting time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
   build:
-    name: Build Jekyll
+    name: Build Jekyll site
     runs-on: ubuntu-latest
     steps:
       - name: Run Jekyll Build
-        run: jekyll build
+        uses: meitar/jekyll-builder-for-github-pages-action@v1
