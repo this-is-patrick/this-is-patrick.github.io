@@ -25,3 +25,4 @@ jobs:
       - uses: meitar/jekyll-builder-for-github-pages-action@master
         with:
           secret_gh_pages_api_token: ${{ secrets.GH_PAGES_TOKEN }}
+          remote_url: https://github.com/this-is-patrick/this-is-patrick.github.io
