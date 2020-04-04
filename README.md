@@ -1,1 +1,1 @@
-![](https://github.com/this-is-patrick/this-is-patrick-github.io/workflows/workflows/Jekyll%20Build/badge.svg)
+![](https://github.com/this-is-patrick/this-is-patrick-github.io/workflows/Jekyll%20Build/badge.svg)
