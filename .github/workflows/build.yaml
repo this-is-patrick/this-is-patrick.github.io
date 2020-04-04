@@ -1,14 +1,25 @@
-name: build
+name: Jekyll Build
 on:
     push:
       branches:
         - master
     schedule:
-      - cron: '*/30 * * * *'
+      - cron: '0 * * * *'
 jobs:
-  build-job:
-    name: Build Job
-    runs-on: ubuntu-18.04
+  hello:
+    name: Greet
+    runs-on: ubuntu-latest
     steps:
-      name: Jekyll build
+      - name: Hello World
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: 'Patrick'
+        id: hello
+      - name: Echo greeting time
+        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+  build:
+    name: Build Jekyll
+    runs-on: ubuntu-latest
+    steps:
+      name: Run Jekyll Build
       run: jekyll build
